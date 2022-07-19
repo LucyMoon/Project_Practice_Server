@@ -24,12 +24,14 @@ public class BaseDataController {
     }
 
     @RequestMapping("/login")
-    public @ResponseBody boolean login(@RequestBody Map<String, Object> params) throws Exception{
+    public @ResponseBody Map<String, Object> login(@RequestBody Map<String, Object> params) throws Exception{
         System.out.println("BaseDataController login : ");
 
         Map<String, Object> responseData = baseDataService.login(params);
-        return responseData != null;
-        //return responseData;
+        if(responseData != null){
+            return responseData;
+        }
+        return null;
 
     }
 
