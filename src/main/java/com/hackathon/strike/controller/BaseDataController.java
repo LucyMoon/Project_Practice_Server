@@ -110,19 +110,19 @@ public class BaseDataController {
     }
 
     @GetMapping("/infoviewposts")
-    public @ResponseBody List<Map<String, Object>> infoviewposts() throws Exception{
+    public @ResponseBody List<Map<String, Object>> infoviewposts(@RequestParam(value="category")String category) throws Exception{
         System.out.println("BaseDataController data : ");
-        List<Map<String, Object>> responseData = baseDataService.infoviewposts();
+        List<Map<String, Object>> responseData = baseDataService.infoviewposts(category);
 
         return responseData;
 
     }
 
     @GetMapping("/infoviewpost")
-    public @ResponseBody Map<String, Object> infoviewpost(@RequestParam(value="index")int index) throws Exception{
+    public @ResponseBody Map<String, Object> infoviewpost(@RequestParam(value="index")int index, @RequestParam(value="category")String category) throws Exception{
         System.out.println("BaseDataController data : ");
 
-        Map<String, Object> responseData = baseDataService.infoviewpost(index);
+        Map<String, Object> responseData = baseDataService.infoviewpost(index, category);
 
         return responseData;
 

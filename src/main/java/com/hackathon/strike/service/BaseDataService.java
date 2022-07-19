@@ -65,16 +65,16 @@ public class BaseDataService {
         return baseDataMapper.updatemy(params);
     }
 
-    public List<Map<String, Object>> infoviewposts() {
+    public List<Map<String, Object>> infoviewposts(String category) {
 
         System.out.println("BaseDataService data : ");
-        return baseDataMapper.infoviewposts();
+        return baseDataMapper.infoviewposts(category);
     }
 
-    public Map<String, Object> infoviewpost(int i) {
+    public Map<String, Object> infoviewpost(int i, String category) {
 
         System.out.println("BaseDataService data : ");
-        return baseDataMapper.infoviewpost(i);
+        return baseDataMapper.infoviewpost(i, category);
     }
 
     public int infopost(Map<String, Object> params){
