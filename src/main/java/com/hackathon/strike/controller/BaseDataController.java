@@ -25,7 +25,7 @@ public class BaseDataController {
 
     @RequestMapping("/login")
     public @ResponseBody Map<String, Object> login(@RequestBody Map<String, Object> params) throws Exception{
-        System.out.println("BaseDataController login : ");
+        System.out.println("BaseDataController login : " + params);
 
         Map<String, Object> responseData = baseDataService.login(params);
         if(responseData != null){
@@ -110,19 +110,19 @@ public class BaseDataController {
     }
 
     @GetMapping("/infoviewposts")
-    public @ResponseBody List<Map<String, Object>> infoviewposts(@RequestParam(value="category")String category) throws Exception{
+    public @ResponseBody List<Map<String, Object>> infoviewposts() throws Exception{
         System.out.println("BaseDataController data : ");
-        List<Map<String, Object>> responseData = baseDataService.infoviewposts(category);
+        List<Map<String, Object>> responseData = baseDataService.infoviewposts();
 
         return responseData;
 
     }
 
     @GetMapping("/infoviewpost")
-    public @ResponseBody Map<String, Object> infoviewpost(@RequestParam(value="index")int index, @RequestParam(value="category")String category) throws Exception{
+    public @ResponseBody Map<String, Object> infoviewpost(@RequestParam(value="index")int index) throws Exception{
         System.out.println("BaseDataController data : ");
 
-        Map<String, Object> responseData = baseDataService.infoviewpost(index, category);
+        Map<String, Object> responseData = baseDataService.infoviewpost(index);
 
         return responseData;
 

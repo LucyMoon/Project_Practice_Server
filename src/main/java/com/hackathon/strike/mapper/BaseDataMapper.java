@@ -19,8 +19,8 @@ public interface BaseDataMapper {
     int Erdelete(Map<String, Object> params);
     List<Map<String, Object>> getmyEr(String id);
     int updatemy(Map<String, Object> params);
-    List<Map<String, Object>> infoviewposts(String category);
-    Map<String, Object> infoviewpost(int i, String category);
+    List<Map<String, Object>> infoviewposts();
+    Map<String, Object> infoviewpost(int i);
     int infopost(Map<String, Object> params);
     int infodelete(Map<String, Object> params);
     int infoupdate(Map<String, Object> params);

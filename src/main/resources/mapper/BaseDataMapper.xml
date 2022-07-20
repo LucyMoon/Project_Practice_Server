@@ -71,13 +71,12 @@
     </select>
 
     <update id="updatemy" parameterType="map">
-        update noepa.hackathon_member set mb_pw = #{mb_pw}, mb_name = #{mb_name} where mb_id = #{mb_id}
+        update noepa.hackathon_member set mb_name = #{mb_name} where mb_id = #{mb_id}
     </update>
 
     <select id="infoviewposts" resultType="map" parameterType="map">
         select *
         from noepa.hackathon_info
-        where info_category = #{info_category}
         order by info_id desc
     </select>
 
@@ -85,7 +84,6 @@
         select *
         from noepa.hackathon_info
         where info_id = #{i}
-        AND info_category = #{info_category}
     </select>
 
     <insert id="infopost" parameterType="map">
@@ -93,13 +91,11 @@
         ( info_writer
         , info_title
         , info_contents
-        , mb_id
-        , info_category)
+        , mb_id)
         VALUES ( #{Er_writer}
                , #{Er_title}
                , #{Er_contents}
-               , #{mb_id}
-               , #{info_category});
+               , #{mb_id});
     </insert>
 
     <delete id="infodelete" parameterType="map">
