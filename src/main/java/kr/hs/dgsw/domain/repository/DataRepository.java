@@ -1,4 +1,4 @@
-package com.hackathon.strike.domain.repository;
+package kr.hs.dgsw.domain.repository;
 
 //@Repository
 //public interface DataRepository extends JpaRepository<Data, String> {

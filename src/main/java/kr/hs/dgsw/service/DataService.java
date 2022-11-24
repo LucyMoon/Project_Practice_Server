@@ -1,4 +1,4 @@
-package com.hackathon.strike.service;
+package kr.hs.dgsw.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

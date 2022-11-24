@@ -1,4 +1,4 @@
-package com.hackathon.strike.controller;
+package kr.hs.dgsw.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

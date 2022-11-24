@@ -1,4 +1,4 @@
-package com.hackathon.strike.domain.entity;
+package kr.hs.dgsw.domain.entity;
 
 @lombok.Data
 public class Data {
